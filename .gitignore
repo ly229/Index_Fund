@@ -1,4 +1,6 @@
 .DS_Store
+*.csv
+*.log
 stock_data/.DS_Store
 machine_learning/.DS_Store
 find_stocks/.DS_Store

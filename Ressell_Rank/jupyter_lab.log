@@ -1,0 +1,163 @@
+[I 2024-10-21 18:39:03.011 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2024-10-21 18:39:03.015 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[I 2024-10-21 18:39:03.019 ServerApp] jupyterlab | extension was successfully linked.
+[I 2024-10-21 18:39:04.041 ServerApp] notebook_shim | extension was successfully linked.
+[I 2024-10-21 18:39:04.079 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2024-10-21 18:39:04.081 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2024-10-21 18:39:04.082 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2024-10-21 18:39:04.083 LabApp] JupyterLab extension loaded from /home/ec2-user/miniconda3/lib/python3.12/site-packages/jupyterlab
+[I 2024-10-21 18:39:04.083 LabApp] JupyterLab application directory is /home/ec2-user/miniconda3/share/jupyter/lab
+[I 2024-10-21 18:39:04.084 LabApp] Extension Manager is 'pypi'.
+[I 2024-10-21 18:39:04.129 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2024-10-21 18:39:04.130 ServerApp] Serving notebooks from local directory: /home/ec2-user/work
+[I 2024-10-21 18:39:04.130 ServerApp] Jupyter Server 2.14.1 is running at:
+[I 2024-10-21 18:39:04.130 ServerApp] http://ip-172-31-17-188.ec2.internal:8888/lab?token=aab1aeefb93f79f73bda27bdc61530abdd62a5c6f892d895
+[I 2024-10-21 18:39:04.130 ServerApp]     http://127.0.0.1:8888/lab?token=aab1aeefb93f79f73bda27bdc61530abdd62a5c6f892d895
+[I 2024-10-21 18:39:04.130 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 2024-10-21 18:39:04.137 ServerApp] 
+    
+    To access the server, open this file in a browser:
+        file:///home/ec2-user/.local/share/jupyter/runtime/jpserver-2939-open.html
+    Or copy and paste one of these URLs:
+        http://ip-172-31-17-188.ec2.internal:8888/lab?token=aab1aeefb93f79f73bda27bdc61530abdd62a5c6f892d895
+        http://127.0.0.1:8888/lab?token=aab1aeefb93f79f73bda27bdc61530abdd62a5c6f892d895
+[I 2024-10-21 18:39:04.160 ServerApp] Skipped non-installed server(s): bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyright, python-language-server, python-lsp-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+[I 2024-10-21 18:43:31.456 ServerApp] 302 GET / (@127.0.0.1) 0.48ms
+0.01s - Debugger warning: It seems that frozen modules are being used, which may
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - to python to disable frozen modules.
+0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+[W 2024-10-21 18:43:34.376 LabApp] Could not determine jupyterlab build status without nodejs
+[W 2024-10-21 18:43:34.870 ServerApp] 404 GET /api/contents/data_check.ipynb?content=0&hash=0&1729536214617 (ae05dd8e6b184b48b1c736c468d08162@127.0.0.1) 1.93ms referer=http://localhost:1111/lab?
+[W 2024-10-21 18:43:34.870 ServerApp] 404 GET /api/contents/data_check.ipynb?content=0&hash=0&1729536214617 (127.0.0.1): No such file or directory: data_check.ipynb
+[W 2024-10-21 18:43:35.599 ServerApp] Notebook replicate_v1.ipynb is not trusted
+[W 2024-10-21 18:43:35.688 ServerApp] Notebook rank_testing.ipynb is not trusted
+[I 2024-10-21 18:43:36.391 ServerApp] Kernel started: 47a5db9b-b6e1-41e3-ac02-1a8313fbb67f
+[I 2024-10-21 18:43:36.397 ServerApp] Kernel started: 47f7db91-6f52-487c-993a-a07d4c8569d6
+[I 2024-10-21 18:43:36.402 ServerApp] Kernel started: 7a86ba32-f1a0-4619-8139-398320c65d88
+[I 2024-10-21 18:43:36.404 ServerApp] Kernel started: f42a9b9e-45b3-400f-9e00-ccd2952713c7
+0.00s - Debugger warning: It seems that frozen modules are being used, which may
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - to python to disable frozen modules.
+0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+0.00s - Debugger warning: It seems that frozen modules are being used, which may
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - to python to disable frozen modules.
+0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+0.00s - Debugger warning: It seems that frozen modules are being used, which may
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - to python to disable frozen modules.
+0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+0.00s - Debugger warning: It seems that frozen modules are being used, which may
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - to python to disable frozen modules.
+0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+[I 2024-10-21 18:43:37.113 ServerApp] Connecting to kernel f42a9b9e-45b3-400f-9e00-ccd2952713c7.
+[I 2024-10-21 18:43:37.160 ServerApp] Connecting to kernel 47a5db9b-b6e1-41e3-ac02-1a8313fbb67f.
+[I 2024-10-21 18:43:37.174 ServerApp] Connecting to kernel 47f7db91-6f52-487c-993a-a07d4c8569d6.
+[I 2024-10-21 18:43:37.264 ServerApp] Starting buffering for f42a9b9e-45b3-400f-9e00-ccd2952713c7:a82fb311-4590-4aac-821c-d72095eec3b1
+[I 2024-10-21 18:43:37.273 ServerApp] Connecting to kernel 7a86ba32-f1a0-4619-8139-398320c65d88.
+[I 2024-10-21 18:43:37.287 ServerApp] Connecting to kernel f42a9b9e-45b3-400f-9e00-ccd2952713c7.
+[I 2024-10-21 18:43:37.367 ServerApp] Connecting to kernel f42a9b9e-45b3-400f-9e00-ccd2952713c7.
+[I 2024-10-21 18:46:08.773 ServerApp] Kernel started: 6cfdb580-33f8-4440-b98d-afb2161c24ac
+0.00s - Debugger warning: It seems that frozen modules are being used, which may
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - to python to disable frozen modules.
+0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+[I 2024-10-21 18:46:09.376 ServerApp] Connecting to kernel 6cfdb580-33f8-4440-b98d-afb2161c24ac.
+[I 2024-10-21 18:46:13.141 ServerApp] Kernel started: c9147e50-e383-4f22-8c1a-d16070820868
+0.00s - Debugger warning: It seems that frozen modules are being used, which may
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - to python to disable frozen modules.
+0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+[I 2024-10-21 18:46:13.751 ServerApp] Connecting to kernel c9147e50-e383-4f22-8c1a-d16070820868.
+[I 2024-10-21 18:46:20.581 ServerApp] Kernel shutdown: c9147e50-e383-4f22-8c1a-d16070820868
+[W 2024-10-21 18:46:20.856 ServerApp] delete /Untitled1.ipynb
+[I 2024-10-21 18:46:25.642 ServerApp] Kernel shutdown: 6cfdb580-33f8-4440-b98d-afb2161c24ac
+[W 2024-10-21 18:46:25.908 ServerApp] delete /Untitled.ipynb
+[I 2024-10-21 18:46:28.424 ServerApp] Creating new file in 
+[W 2024-10-21 18:46:40.042 ServerApp] delete /untitled.txt
+[I 2024-10-21 18:46:43.374 ServerApp] Creating new directory in 
+[I 2024-10-21 18:47:26.156 ServerApp] Creating new directory in 
+[I 2024-10-21 18:48:16.154 ServerApp] Creating new notebook in /Descrip_Stat
+[I 2024-10-21 18:48:18.367 ServerApp] Kernel started: fc7703ac-bd86-4118-a1fe-6414f1c026f7
+0.00s - Debugger warning: It seems that frozen modules are being used, which may
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - to python to disable frozen modules.
+0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+[I 2024-10-21 18:48:18.946 ServerApp] Connecting to kernel fc7703ac-bd86-4118-a1fe-6414f1c026f7.
+[I 2024-10-21 18:48:28.864 ServerApp] Starting buffering for 47a5db9b-b6e1-41e3-ac02-1a8313fbb67f:f8e70cb8-21e0-4be8-b304-67dcd49f9f27
+[I 2024-10-21 18:48:30.400 ServerApp] Starting buffering for 7a86ba32-f1a0-4619-8139-398320c65d88:33426b7a-c36f-4f53-8b64-a3e9d572b4bf
+[I 2024-10-21 18:50:46.677 ServerApp] Saving file at /Descrip_Stat/sp500.ipynb
+[I 2024-10-21 18:52:46.798 ServerApp] Saving file at /Descrip_Stat/sp500.ipynb
+[I 2024-10-21 18:54:46.926 ServerApp] Saving file at /Descrip_Stat/sp500.ipynb
+[I 2024-10-21 18:56:47.012 ServerApp] Saving file at /Descrip_Stat/sp500.ipynb
+[I 2024-10-21 18:58:47.102 ServerApp] Saving file at /Descrip_Stat/sp500.ipynb
+[I 2024-10-21 19:00:47.201 ServerApp] Saving file at /Descrip_Stat/sp500.ipynb
+[I 2024-10-21 19:02:47.300 ServerApp] Saving file at /Descrip_Stat/sp500.ipynb
+[I 2024-10-21 19:04:47.390 ServerApp] Saving file at /Descrip_Stat/sp500.ipynb
+[I 2024-10-21 19:06:47.506 ServerApp] Saving file at /Descrip_Stat/sp500.ipynb
+[I 2024-10-21 19:08:47.601 ServerApp] Saving file at /Descrip_Stat/sp500.ipynb
+[I 2024-10-21 19:10:47.785 ServerApp] Saving file at /Descrip_Stat/sp500.ipynb
+[I 2024-10-21 19:12:48.003 ServerApp] Saving file at /Descrip_Stat/sp500.ipynb
+[I 2024-10-21 19:14:48.119 ServerApp] Saving file at /Descrip_Stat/sp500.ipynb
+[I 2024-10-21 19:16:09.294 ServerApp] Kernel interrupted: fc7703ac-bd86-4118-a1fe-6414f1c026f7
+[I 2024-10-21 19:16:48.215 ServerApp] Saving file at /Descrip_Stat/sp500.ipynb
+[I 2024-10-21 19:18:48.332 ServerApp] Saving file at /Descrip_Stat/sp500.ipynb
+[I 2024-10-21 19:19:53.829 ServerApp] Kernel interrupted: fc7703ac-bd86-4118-a1fe-6414f1c026f7
+[I 2024-10-21 19:19:59.802 ServerApp] Kernel restarted: fc7703ac-bd86-4118-a1fe-6414f1c026f7
+[I 2024-10-21 19:19:59.913 ServerApp] Starting buffering for fc7703ac-bd86-4118-a1fe-6414f1c026f7:037185c9-67cd-411e-8ea3-1b30822d6f25
+[I 2024-10-21 19:19:59.947 ServerApp] Connecting to kernel fc7703ac-bd86-4118-a1fe-6414f1c026f7.
+[I 2024-10-21 19:19:59.947 ServerApp] Restoring connection for fc7703ac-bd86-4118-a1fe-6414f1c026f7:037185c9-67cd-411e-8ea3-1b30822d6f25
+0.00s - Debugger warning: It seems that frozen modules are being used, which may
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - to python to disable frozen modules.
+0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+[I 2024-10-21 19:20:48.429 ServerApp] Saving file at /Descrip_Stat/sp500.ipynb
+[I 2024-10-21 19:22:48.518 ServerApp] Saving file at /Descrip_Stat/sp500.ipynb
+[I 2024-10-21 19:24:48.619 ServerApp] Saving file at /Descrip_Stat/sp500.ipynb
+[I 2024-10-21 19:26:48.723 ServerApp] Saving file at /Descrip_Stat/sp500.ipynb
+[I 2024-10-21 19:28:48.851 ServerApp] Saving file at /Descrip_Stat/sp500.ipynb
+[I 2024-10-21 19:30:48.939 ServerApp] Saving file at /Descrip_Stat/sp500.ipynb
+[I 2024-10-21 19:34:49.149 ServerApp] Saving file at /Descrip_Stat/sp500.ipynb
+[I 2024-10-21 19:39:02.901 ServerApp] Uploading file to /Descrip_Stat/sp500_crsp.ipynb
+[W 2024-10-21 19:39:09.116 ServerApp] Notebook Descrip_Stat/sp500_crsp.ipynb is not trusted
+[I 2024-10-21 19:39:09.435 ServerApp] Kernel started: d9e1cae1-3265-4213-8c3f-ad29c21d17e6
+0.00s - Debugger warning: It seems that frozen modules are being used, which may
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - to python to disable frozen modules.
+0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+[I 2024-10-21 19:39:10.025 ServerApp] Connecting to kernel d9e1cae1-3265-4213-8c3f-ad29c21d17e6.
+[W 2024-10-21 19:39:34.923 ServerApp] Notebook Ressell_Rank/sp500_crsp_lu.ipynb is not trusted
+[I 2024-10-21 19:39:35.177 ServerApp] Kernel started: bafd83fb-0e82-4729-bd2d-a0a158ca944f
+0.00s - Debugger warning: It seems that frozen modules are being used, which may
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - to python to disable frozen modules.
+0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+[I 2024-10-21 19:39:35.840 ServerApp] Connecting to kernel bafd83fb-0e82-4729-bd2d-a0a158ca944f.
+[I 2024-10-21 19:40:05.143 ServerApp] Starting buffering for bafd83fb-0e82-4729-bd2d-a0a158ca944f:1041c87b-a9da-4c48-b7e1-2f0adf21a139
+[I 2024-10-21 19:40:49.239 ServerApp] Saving file at /Descrip_Stat/sp500.ipynb
+[I 2024-10-21 19:41:09.209 ServerApp] Saving file at /Descrip_Stat/sp500_crsp.ipynb
+[W 2024-10-21 19:41:09.209 ServerApp] Notebook Descrip_Stat/sp500_crsp.ipynb is not trusted
+[I 2024-10-21 19:42:49.319 ServerApp] Saving file at /Descrip_Stat/sp500.ipynb
+[I 2024-10-21 19:43:09.291 ServerApp] Saving file at /Descrip_Stat/sp500_crsp.ipynb
+[W 2024-10-21 19:43:09.291 ServerApp] Notebook Descrip_Stat/sp500_crsp.ipynb is not trusted
+[I 2024-10-21 19:44:49.410 ServerApp] Saving file at /Descrip_Stat/sp500.ipynb
+[I 2024-10-21 19:54:50.142 ServerApp] Saving file at /Descrip_Stat/sp500.ipynb
+[I 2024-10-21 19:56:50.276 ServerApp] Saving file at /Descrip_Stat/sp500.ipynb
+[I 2024-10-21 20:02:50.383 ServerApp] Saving file at /Descrip_Stat/sp500.ipynb
+[I 2024-10-21 20:04:50.528 ServerApp] Saving file at /Descrip_Stat/sp500.ipynb
+[I 2024-10-21 20:06:50.625 ServerApp] Saving file at /Descrip_Stat/sp500.ipynb
+[I 2024-10-21 20:08:50.755 ServerApp] Saving file at /Descrip_Stat/sp500.ipynb
+[I 2024-10-21 20:10:50.861 ServerApp] Saving file at /Descrip_Stat/sp500.ipynb
+[I 2024-10-21 20:12:50.962 ServerApp] Saving file at /Descrip_Stat/sp500.ipynb
+[I 2024-10-21 20:14:51.064 ServerApp] Saving file at /Descrip_Stat/sp500.ipynb
+[I 2024-10-21 20:20:51.150 ServerApp] Saving file at /Descrip_Stat/sp500.ipynb
+[I 2024-10-21 20:23:47.949 ServerApp] Saving file at /Descrip_Stat/wrds_sp500_example.ipynb
+[W 2024-10-21 20:23:47.949 ServerApp] Notebook Descrip_Stat/wrds_sp500_example.ipynb is not trusted
+[I 2024-10-21 20:25:39.688 ServerApp] Creating new file in /Descrip_Stat
+[W 2024-10-21 20:25:44.510 ServerApp] delete /Descrip_Stat/untitled.txt
+[I 2024-10-21 20:25:46.542 ServerApp] Creating new directory in /Descrip_Stat
+[I 2024-10-21 20:25:48.161 ServerApp] Saving file at /Descrip_Stat/wrds_sp500_example.ipynb
+[W 2024-10-21 20:25:48.161 ServerApp] Notebook Descrip_Stat/wrds_sp500_example.ipynb is not trusted
+[C 2024-10-21 20:27:30.221 ServerApp] received signal 15, stopping
