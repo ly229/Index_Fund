@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<line x1="80" y1="530" x2="870" y2="530" stroke="#333"/>
+<line x1="80" y1="50" x2="80" y2="530" stroke="#333"/>
+<line x1="80.00" y1="530" x2="80.00" y2="536" stroke="#333"/>
+<text x="80.00" y="552" text-anchor="middle" font-family="Arial" font-size="12">10%</text>
+<line x1="167.78" y1="530" x2="167.78" y2="536" stroke="#333"/>
+<text x="167.78" y="552" text-anchor="middle" font-family="Arial" font-size="12">20%</text>
+<line x1="255.56" y1="530" x2="255.56" y2="536" stroke="#333"/>
+<text x="255.56" y="552" text-anchor="middle" font-family="Arial" font-size="12">30%</text>
+<line x1="343.33" y1="530" x2="343.33" y2="536" stroke="#333"/>
+<text x="343.33" y="552" text-anchor="middle" font-family="Arial" font-size="12">40%</text>
+<line x1="431.11" y1="530" x2="431.11" y2="536" stroke="#333"/>
+<text x="431.11" y="552" text-anchor="middle" font-family="Arial" font-size="12">50%</text>
+<line x1="518.89" y1="530" x2="518.89" y2="536" stroke="#333"/>
+<text x="518.89" y="552" text-anchor="middle" font-family="Arial" font-size="12">60%</text>
+<line x1="606.67" y1="530" x2="606.67" y2="536" stroke="#333"/>
+<text x="606.67" y="552" text-anchor="middle" font-family="Arial" font-size="12">70%</text>
+<line x1="694.44" y1="530" x2="694.44" y2="536" stroke="#333"/>
+<text x="694.44" y="552" text-anchor="middle" font-family="Arial" font-size="12">80%</text>
+<line x1="782.22" y1="530" x2="782.22" y2="536" stroke="#333"/>
+<text x="782.22" y="552" text-anchor="middle" font-family="Arial" font-size="12">90%</text>
+<line x1="870.00" y1="530" x2="870.00" y2="536" stroke="#333"/>
+<text x="870.00" y="552" text-anchor="middle" font-family="Arial" font-size="12">100%</text>
+<line x1="74" y1="530.00" x2="80" y2="530.00" stroke="#333"/>
+<text x="70" y="534.00" text-anchor="end" font-family="Arial" font-size="12">-0.4803</text>
+<line x1="74" y1="434.00" x2="80" y2="434.00" stroke="#333"/>
+<text x="70" y="438.00" text-anchor="end" font-family="Arial" font-size="12">-0.3434</text>
+<line x1="74" y1="338.00" x2="80" y2="338.00" stroke="#333"/>
+<text x="70" y="342.00" text-anchor="end" font-family="Arial" font-size="12">-0.2064</text>
+<line x1="74" y1="242.00" x2="80" y2="242.00" stroke="#333"/>
+<text x="70" y="246.00" text-anchor="end" font-family="Arial" font-size="12">-0.06948</text>
+<line x1="74" y1="146.00" x2="80" y2="146.00" stroke="#333"/>
+<text x="70" y="150.00" text-anchor="end" font-family="Arial" font-size="12">0.06745</text>
+<line x1="74" y1="50.00" x2="80" y2="50.00" stroke="#333"/>
+<text x="70" y="54.00" text-anchor="end" font-family="Arial" font-size="12">0.2044</text>
+<polygon points="80.00,190.80 167.78,146.90 255.56,120.99 343.33,199.22 431.11,193.78 518.89,203.10 606.67,169.30 694.44,90.00 782.22,153.24 870.00,112.87 870.00,215.71 782.22,296.26 694.44,239.56 606.67,277.59 518.89,332.10 431.11,368.82 343.33,382.91 255.56,287.64 167.78,342.03 80.00,490.00" fill="#1f77b4" fill-opacity="0.2" stroke="none"/>
+<polyline fill="none" stroke="#1f77b4" stroke-width="2" points="80.00,340.40 167.78,244.47 255.56,204.31 343.33,291.07 431.11,281.30 518.89,267.60 606.67,223.45 694.44,164.78 782.22,224.75 870.00,164.29"/>
+<circle cx="80.00" cy="340.40" r="3" fill="#1f77b4"/>
+<circle cx="167.78" cy="244.47" r="3" fill="#1f77b4"/>
+<circle cx="255.56" cy="204.31" r="3" fill="#1f77b4"/>
+<circle cx="343.33" cy="291.07" r="3" fill="#1f77b4"/>
+<circle cx="431.11" cy="281.30" r="3" fill="#1f77b4"/>
+<circle cx="518.89" cy="267.60" r="3" fill="#1f77b4"/>
+<circle cx="606.67" cy="223.45" r="3" fill="#1f77b4"/>
+<circle cx="694.44" cy="164.78" r="3" fill="#1f77b4"/>
+<circle cx="782.22" cy="224.75" r="3" fill="#1f77b4"/>
+<circle cx="870.00" cy="164.29" r="3" fill="#1f77b4"/>
+<text x="450.0" y="580" text-anchor="middle" font-family="Arial" font-size="14">market capitalization deciles</text>
+<text x="20" y="300.0" text-anchor="middle" font-family="Arial" font-size="14" transform="rotate(-90 20 300.0)">beta_index_owneship</text>
+<text x="450.0" y="30" text-anchor="middle" font-family="Arial" font-size="16">Volatility</text>
+</svg>
