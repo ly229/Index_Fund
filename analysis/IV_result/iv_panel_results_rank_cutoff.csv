@@ -1,0 +1,4 @@
+dep_var,nobs,n_firms,n_dates,endog_var,instrument,controls,beta_endog,se_endog,t_endog,p_endog,first_stage_f,first_stage_p,n_clusters,fixed_effects,se_type,bandwidth,cutoff
+amihud_illiq,9081,950,99,ind_own,z_rank_le_cutoff,mktcap;c_dollar_vol;r_tno;rank_minus_cutoff,0.09241112265877138,0.159547983428387,0.5792058330856312,0.5624502954135577,0.43184116813459983,0.5110868953278063,950,cusip_fe;date_fe,firm_clustered,150.0,1000.0
+volatility,9069,950,99,ind_own,z_rank_le_cutoff,mktcap;c_dollar_vol;r_tno;rank_minus_cutoff,13.775544271471517,22.557406104008503,0.610688312652383,0.5414059448003605,0.4274404328908526,0.5132475688681799,950,cusip_fe;date_fe,firm_clustered,150.0,1000.0
+price_info,9011,945,99,ind_own,z_rank_le_cutoff,mktcap;c_dollar_vol;r_tno;rank_minus_cutoff,29.616203971863797,111.45906028226132,0.26571374186058166,0.7904596792572489,0.38701191836754456,0.5338742609564067,945,cusip_fe;date_fe,firm_clustered,150.0,1000.0
