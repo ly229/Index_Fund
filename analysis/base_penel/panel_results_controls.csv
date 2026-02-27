@@ -1,0 +1,9 @@
+,amihud_illiq,volatility,price_info
+ind_own,0.0613 (0.0201),-0.0560 (0.0233),-3.3018 (0.2384)
+c_firm_size,0.0084 (0.0016),-0.0984 (0.0031),-0.3406 (0.0269)
+c_dollar_vol,-0.0222 (0.0017),0.0748 (0.0024),0.1453 (0.0148)
+N,241199,240515,239758
+Entities,8877,8858,8855
+Time,100,100,100
+FE,Entity+Time,Entity+Time,Entity+Time
+SE,Two-way clustered,Two-way clustered,Two-way clustered

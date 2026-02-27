@@ -1,0 +1,26 @@
+\begin{table}[!htbp]\centering
+\caption{Panel Regressions with Firm and Time Fixed Effects}
+\label{tab:panel_controls}
+\begin{tabular}{lccc}
+\toprule
+ & amihud_illiq & volatility & price_info \\
+\midrule
+Industry ownership (ind_own) & 0.0613*** & -0.0560** & -3.3018*** \\
+ & (0.0201) & (0.0233) & (0.2384) \\
+Firm size (c_firm_size) & 0.0084*** & -0.0984*** & -0.3406*** \\
+ & (0.0016) & (0.0031) & (0.0269) \\
+Dollar volume (c_dollar_vol) & -0.0222*** & 0.0748*** & 0.1453*** \\
+ & (0.0017) & (0.0024) & (0.0148) \\
+\midrule
+Observations & 241199 & 240515 & 239758 \\
+Entities & 8877 & 8858 & 8855 \\
+Time periods & 100 & 100 & 100 \\
+Firm FE & Yes & Yes & Yes \\
+Time FE & Yes & Yes & Yes \\
+Two-way clustered SE & Yes & Yes & Yes \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\footnotesize
+\item Notes: Two-way clustered standard errors by firm and date in parentheses. * p$<$0.10, ** p$<$0.05, *** p$<$0.01.
+\end{tablenotes}
+\end{table}

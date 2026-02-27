@@ -1,0 +1,10 @@
+dep_var,rhs_var,coef,se,pval,stars,nobs,entities,time_periods,fe,se_type
+amihud_illiq,ind_own,0.0613215716257639,0.020138190022698933,0.002326762807498106,***,241199,8877,100,Entity+Time,Two-way clustered
+amihud_illiq,c_firm_size,0.008373557443936568,0.0016465676653492243,3.670163530866688e-07,***,241199,8877,100,Entity+Time,Two-way clustered
+amihud_illiq,c_dollar_vol,-0.022183288393578617,0.0017013497952893047,0.0,***,241199,8877,100,Entity+Time,Two-way clustered
+volatility,ind_own,-0.05604777139662616,0.023341145376140106,0.016340247246100947,**,240515,8858,100,Entity+Time,Two-way clustered
+volatility,c_firm_size,-0.09841997372372267,0.0031225281242893196,0.0,***,240515,8858,100,Entity+Time,Two-way clustered
+volatility,c_dollar_vol,0.07476045286949756,0.0024130040485055215,0.0,***,240515,8858,100,Entity+Time,Two-way clustered
+price_info,ind_own,-3.301761598834548,0.23842384486484475,0.0,***,239758,8855,100,Entity+Time,Two-way clustered
+price_info,c_firm_size,-0.3406330046215099,0.026869944487589573,0.0,***,239758,8855,100,Entity+Time,Two-way clustered
+price_info,c_dollar_vol,0.14534355993759634,0.014793097859781128,0.0,***,239758,8855,100,Entity+Time,Two-way clustered

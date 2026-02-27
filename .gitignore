@@ -6,3 +6,9 @@ find_stocks/.DS_Store
 stock_analysis/.DS_Store
 portfolio_strategies/.DS_Store
 technical_indicators/.DS_Store
+
+# Large local datasets (kept outside Git)
+Descrip_Stat/df_regression_iv.csv
+Reasearch/Baseline/df_regression_iv.csv
+Reasearch/Baseline/.ipynb_checkpoints/df_regression_iv-checkpoint.csv
+data/df_regression.csv
