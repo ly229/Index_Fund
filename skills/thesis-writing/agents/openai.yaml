@@ -1,0 +1,4 @@
+interface:
+  display_name: "Thesis Writing"
+  short_description: "Draft thesis sections in the reference dissertation style"
+  default_prompt: "When drafting or revising, mirror the tone and structure of references/reference_style.pdf (Lu Yu 2022 economics dissertation): formal, evidence-driven, clear transitions, author-year citations, figure captions with data sources."
