@@ -15,6 +15,7 @@ Produce thesis-quality prose that mirrors the reference dissertation sample (Lu 
 - Draft with disciplined transitions ("while", "whereas", "as a result"), author-year citations for literature, numeric footnotes only for clarifications/data sources.
 - Reference figures/tables in-text ("Figure 1 shows ...") and supply concise captions that include data source.
 - Revise for cohesion: consistent terminology, parallel phrasing, minimal rhetorical flourish, explicit logical flow.
+- Default output location: Write generated chapter text to `thesis/` unless the user specifies a different destination. Save output as Word format (for example, `.docx`) rather than Markdown.
 
 ## Style Guardrails (drawn from reference)
 - Tone: Objective, analytical, formal; avoid colloquial verbs and adjectives.
@@ -22,6 +23,7 @@ Produce thesis-quality prose that mirrors the reference dissertation sample (Lu 
 - Sentence shape: Multi-clause but clear; keep connectors explicit; avoid fragments.
 - Evidence: Pair claims with statistics or citations; surface data origin in captions or footnotes.
 - Citations: Author-year for literature (e.g., "Kim et al. (2012)"); superscript footnotes for data or explanatory notes.
+- Data references: Do not cite raw filenames or paths (for example, avoid `data/df_regression.csv`); describe datasets in prose and use footnotes or captions for sources.
 - Captions: Start "Figure X:" followed by a plain summary; end with "Data Source: ..." when applicable.
 
 ## Section Patterns
