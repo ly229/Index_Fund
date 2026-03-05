@@ -6,7 +6,7 @@ description: Draft and revise thesis sections in a formal economics/finance diss
 # Thesis Writing
 
 ## Overview
-Produce thesis-quality prose that mirrors the reference dissertation sample (Lu Yu, 2022) with formal, data-driven academic tone suitable for economics/finance.
+Produce thesis-quality prose that mirrors the reference dissertation sample (Lu Yu, 2022) with a formal, data-driven academic tone suitable for economics/finance. Write each paragraph to be approximately 4–6 sentences. Favor explicit transitions so each paragraph develops a single coherent point. Keep claims precise and tied to evidence or citations. Avoid filler sentences that dilute the main idea.
 
 ## Quick Start
 - Confirm section type (introduction, literature review, empirical design, results, conclusion) and key inputs (question, data, findings).
@@ -18,9 +18,10 @@ Produce thesis-quality prose that mirrors the reference dissertation sample (Lu 
 - Default output location: Write generated chapter text to `thesis/` unless the user specifies a different destination. Save output as Word format (for example, `.docx`) rather than Markdown.
 
 ## Style Guardrails (drawn from reference)
-- Tone: Objective, analytical, formal; avoid colloquial verbs and adjectives.
+- Tone: Objective, analytical, formal, and professional academic; avoid colloquial verbs and adjectives.
 - Voice: Mainly third-person; first-person plural acceptable for method statements.
 - Sentence shape: Multi-clause but clear; keep connectors explicit; avoid fragments.
+- Paragraph style: Target 4–6 sentences per paragraph; each paragraph should develop one main idea with explicit transitions.
 - Evidence: Pair claims with statistics or citations; surface data origin in captions or footnotes.
 - Citations: Author-year for literature (e.g., "Kim et al. (2012)"); superscript footnotes for data or explanatory notes.
 - Data references: Do not cite raw filenames or paths (for example, avoid `data/df_regression.csv`); describe datasets in prose and use footnotes or captions for sources.
