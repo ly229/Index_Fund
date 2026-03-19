@@ -1,0 +1,35 @@
+\begin{table}[!htbp]\centering
+\caption{First-Stage F Statistics for Spline IV at Global Russell 2000 Cutoff}
+\label{tab:iv_spline_global_first_stage}
+\begin{threeparttable}
+\footnotesize
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.05}
+\begin{tabular}{lccc}
+\toprule
+ & Amihud illiquidity & Volatility & Price informativeness \\
+\midrule
+Spline basis 1 & \shortstack{53.9018\\(p=<1e-16)} & \shortstack{53.8301\\(p=<1e-16)} & \shortstack{53.9410\\(p=<1e-16)} \\
+Spline basis 2 & \shortstack{18.5412\\(p=<1e-16)} & \shortstack{18.4897\\(p=<1e-16)} & \shortstack{18.4978\\(p=<1e-16)} \\
+Spline basis 3 & \shortstack{15.7369\\(p=1.55e-15)} & \shortstack{15.9077\\(p=9.99e-16)} & \shortstack{15.6617\\(p=1.89e-15)} \\
+Spline basis 4 & \shortstack{56.1608\\(p=<1e-16)} & \shortstack{56.2035\\(p=<1e-16)} & \shortstack{56.0468\\(p=<1e-16)} \\
+\midrule
+Observations & 235544 & 234897 & 234281 \\
+Firms & 8627 & 8605 & 8614 \\
+Dates & 99 & 99 & 99 \\
+Cutoff & 2000 & 2000 & 2000 \\
+Poly degree & 4 & 4 & 4 \\
+Min first-stage F & 15.7369 & 15.9077 & 15.6617 \\
+Controls & c_firm_size, c_dollar_vol, running powers 1-4 & c_firm_size, c_dollar_vol, running powers 1-4 & c_firm_size, c_dollar_vol, running powers 1-4 \\
+Excluded instruments & z_running powers 0-4 & z_running powers 0-4 & z_running powers 0-4 \\
+Fixed effects & firm + date & firm + date & firm + date \\
+SE type & firm clustered & firm clustered & firm clustered \\
+\bottomrule
+\end{tabular}
+\vspace{0.35em}
+\noindent\parbox{\textwidth}{\footnotesize
+Notes: This table reports first-stage relevance diagnostics for the spline IV specification. Entries are first-stage F statistics for each endogenous spline basis term, with p-values shown underneath. The model uses firm and date fixed effects and firm-clustered standard errors. * p$<$0.10, ** p$<$0.05, *** p$<$0.01.\\
+The spline basis is a natural cubic spline in `ind_own` with four endogenous terms and excluded instruments formed by cutoff interactions with running-variable powers.
+}
+\end{threeparttable}
+\end{table}

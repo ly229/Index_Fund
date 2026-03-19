@@ -1,0 +1,36 @@
+\begin{table}[!htbp]\centering
+\caption{IV Regression Results for Spline IV at Global Russell 2000 Cutoff}
+\label{tab:iv_spline_global_results}
+\begin{threeparttable}
+\footnotesize
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.05}
+\begin{tabular}{lccc}
+\toprule
+ & Amihud illiquidity & Volatility & Price informativeness \\
+\midrule
+Spline basis 1 & \shortstack{0.0095\\(0.0191)} & \shortstack{-0.0086\\(0.0269)} & \shortstack{-0.3619\\(0.3264)} \\
+Spline basis 2 & \shortstack{0.0095**\\(0.0038)} & \shortstack{-0.0068\\(0.0072)} & \shortstack{-0.3663***\\(0.0964)} \\
+Spline basis 3 & \shortstack{-0.0040\\(0.0440)} & \shortstack{0.0343\\(0.0781)} & \shortstack{-1.0792\\(1.0048)} \\
+Spline basis 4 & \shortstack{-0.0093\\(0.0487)} & \shortstack{0.0093\\(0.0581)} & \shortstack{-0.4132\\(0.6949)} \\
+\midrule
+Observations & 235544 & 234897 & 234281 \\
+Firms & 8627 & 8605 & 8614 \\
+Dates & 99 & 99 & 99 \\
+Cutoff & 2000 & 2000 & 2000 \\
+Poly degree & 4 & 4 & 4 \\
+Min first-stage F & 15.7369 & 15.9077 & 15.6617 \\
+Best `ind_own` & 22.7% & 3.3% & 14.7% \\
+Controls & c_firm_size, c_dollar_vol, running powers 1-4 & c_firm_size, c_dollar_vol, running powers 1-4 & c_firm_size, c_dollar_vol, running powers 1-4 \\
+Excluded instruments & z_running powers 0-4 & z_running powers 0-4 & z_running powers 0-4 \\
+Fixed effects & firm + date & firm + date & firm + date \\
+SE type & firm clustered & firm clustered & firm clustered \\
+\bottomrule
+\end{tabular}
+\vspace{0.35em}
+\noindent\parbox{\textwidth}{\footnotesize
+Notes: This table reports the second-stage IV spline coefficients for the global Russell 2000 design. Standard errors are reported underneath coefficients in parentheses. The dependent-variable panels correspond to Amihud illiquidity, volatility, and price informativeness. * p$<$0.10, ** p$<$0.05, *** p$<$0.01.\\
+The spline basis is a natural cubic spline in `ind_own` with firm and date fixed effects and firm-clustered standard errors.
+}
+\end{threeparttable}
+\end{table}

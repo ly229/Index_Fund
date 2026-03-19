@@ -1,0 +1,30 @@
+\begin{table}[!htbp]\centering
+\caption{Panel Regressions with Firm and Time Fixed Effects: Detailed Output}
+\label{tab:panel_controls_detailed}
+\begin{threeparttable}
+\footnotesize
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.05}
+\begin{tabular}{lccc}
+\toprule
+ & Amihud illiquidity & Volatility & Price informativeness \\
+\midrule
+Industry ownership & \shortstack{0.0613***\\(0.0201)} & \shortstack{-0.0560**\\(0.0233)} & \shortstack{-3.3018***\\(0.2384)} \\
+Firm size & \shortstack{0.0084***\\(0.0016)} & \shortstack{-0.0984***\\(0.0031)} & \shortstack{-0.3406***\\(0.0269)} \\
+Dollar volume & \shortstack{-0.0222***\\(0.0017)} & \shortstack{0.0748***\\(0.0024)} & \shortstack{0.1453***\\(0.0148)} \\
+\midrule
+Observations & 241199 & 240515 & 239758 \\
+Entities & 8877 & 8858 & 8855 \\
+Time periods & 100 & 100 & 100 \\
+Firm FE & Yes & Yes & Yes \\
+Time FE & Yes & Yes & Yes \\
+Two-way clustered SE & Yes & Yes & Yes \\
+\bottomrule
+\end{tabular}
+\vspace{0.35em}
+\noindent\parbox{\textwidth}{\footnotesize
+Notes: This table reports panel fixed-effects regressions with two-way clustered standard errors by firm and date. Standard errors are reported underneath coefficients in parentheses. * p$<$0.10, ** p$<$0.05, *** p$<$0.01.\\
+The detailed output preserves the model-level counts and specification flags used in the baseline panel regressions.
+}
+\end{threeparttable}
+\end{table}

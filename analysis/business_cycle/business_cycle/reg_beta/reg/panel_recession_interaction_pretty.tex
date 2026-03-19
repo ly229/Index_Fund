@@ -1,0 +1,30 @@
+\begin{table}[!htbp]\centering
+\caption{Heterogeneity by Recession: Panel FE with Interaction}
+\label{tab:recession_interaction}
+\begin{tabular}{lccc}
+\toprule
+ & amihud_illiq & volatility & price_info \\
+\midrule
+Industry ownership (ind_own) & 0.0800*** & -0.0681*** & -3.2530*** \\
+ & (0.0237) & (0.0231) & (0.2401) \\
+Interaction: ind_own $\times$ recession & -0.2142** & 0.1390 & -0.5590 \\
+ & (0.0867) & (0.1036) & (0.8015) \\
+Firm size (c_firm_size) & 0.0082*** & -0.0983*** & -0.3411*** \\
+ & (0.0016) & (0.0031) & (0.0267) \\
+Dollar volume (c_dollar_vol) & -0.0221*** & 0.0747*** & 0.1456*** \\
+ & (0.0017) & (0.0024) & (0.0147) \\
+\midrule
+Observations & 241199 & 240515 & 239758 \\
+Entities & 8877 & 8858 & 8855 \\
+Time periods & 100 & 100 & 100 \\
+Firm FE & Yes & Yes & Yes \\
+Time FE & Yes & Yes & Yes \\
+Two-way clustered SE & Yes & Yes & Yes \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\footnotesize
+\item Recession quarters: 2001Q1-2001Q4, 2007Q4-2009Q2, 2019Q4-2020Q2.
+\item Interaction coefficient is incremental slope in recession periods relative to non-recession quarters.
+\item Two-way clustered SE by firm and date in parentheses. * p$<$0.10, ** p$<$0.05, *** p$<$0.01.
+\end{tablenotes}
+\end{table}

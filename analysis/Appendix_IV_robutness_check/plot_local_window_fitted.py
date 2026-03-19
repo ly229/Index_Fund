@@ -5,17 +5,60 @@ import sys
 from pathlib import Path
 
 import matplotlib
+
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+from matplotlib.lines import Line2D
+from matplotlib.ticker import MaxNLocator
 
-# Ensure we can import the core IV helper.
-sys.path.append("analysis/IV_result/IV_codes")
+
+SCRIPT_DIR = Path(__file__).resolve().parent
+ROOT_DIR = SCRIPT_DIR.parent.parent
+IV_CODES_DIR = ROOT_DIR / "analysis" / "IV_result" / "IV_codes"
+if str(IV_CODES_DIR) not in sys.path:
+    sys.path.append(str(IV_CODES_DIR))
+
 import panel_iv_rank_cutoff as piv
 
-GRID_PATH = Path("analysis/IV_robutness_check/iv_robustness_grid_results.csv")
-OUT_FIG = Path("analysis/IV_robutness_check/iv_local_windows_fitted.svg")
+
+GRID_PATH = SCRIPT_DIR / "iv_robustness_grid_results.csv"
+OUT_FIG = SCRIPT_DIR / "iv_local_windows_fitted.svg"
+
+DEP_LABELS = {
+    "amihud_illiq": "Amihud illiquidity",
+    "volatility": "Volatility",
+    "price_info": "Price informativeness",
+}
+PANEL_MARKS = {
+    "amihud_illiq": "a)",
+    "volatility": "b)",
+    "price_info": "c)",
+}
+
+
+def set_research_style() -> None:
+    plt.rcParams.update(
+        {
+            "font.family": "serif",
+            "font.serif": ["STIX Two Text", "Times New Roman", "DejaVu Serif"],
+            "mathtext.fontset": "stix",
+            "axes.spines.top": False,
+            "axes.spines.right": False,
+            "axes.edgecolor": "#333333",
+            "axes.linewidth": 0.8,
+            "axes.titlesize": 12.5,
+            "axes.titleweight": "semibold",
+            "axes.labelsize": 11,
+            "xtick.labelsize": 9.5,
+            "ytick.labelsize": 9.5,
+            "legend.fontsize": 9.2,
+            "figure.facecolor": "white",
+            "axes.facecolor": "white",
+            "savefig.facecolor": "white",
+        }
+    )
 
 
 def select_specs():
@@ -30,6 +73,7 @@ def select_specs():
     )
     if len(agg) < 5:
         raise ValueError("Need at least five local specifications.")
+
     idxs = [0, 1, len(agg) // 2, len(agg) - 2, len(agg) - 1]
     specs = []
     for i in idxs:
@@ -49,7 +93,10 @@ def compute_fitted(dep_var: str, cutoff: float, bandwidth: float):
         dep_var, rank_map, cutoff, bandwidth
     )
     if len(y) == 0:
-        raise RuntimeError(f"No observations for spec cutoff={cutoff}, bandwidth={bandwidth}")
+        raise RuntimeError(
+            f"No observations for spec cutoff={cutoff}, bandwidth={bandwidth}"
+        )
+
     M = np.column_stack([y, x, z, w])
     M_dm = piv.two_way_demean(M, firm_ids, time_ids)
     y_dm = M_dm[:, 0]
@@ -57,7 +104,6 @@ def compute_fitted(dep_var: str, cutoff: float, bandwidth: float):
     z_dm = M_dm[:, 2]
     w_dm = M_dm[:, 3:]
     beta, _ = piv.iv_2sls_clustered(y_dm, x_dm, z_dm, w_dm, firm_ids)
-    b = float(beta[0])
 
     xlo = float(np.quantile(x_dm, 0.01))
     xhi = float(np.quantile(x_dm, 0.99))
@@ -68,21 +114,27 @@ def compute_fitted(dep_var: str, cutoff: float, bandwidth: float):
         xhi = xlo + 1.0
 
     return {
-        "beta": b,
+        "beta": float(beta[0]),
         "xlo": xlo,
         "xhi": xhi,
         "n": int(len(x_dm)),
     }
 
 
+def make_label(spec: dict) -> str:
+    return (
+        f"c={int(spec['cutoff'])}, bw={int(spec['bandwidth'])}, "
+        f"F={spec['avg_f']:.2f}"
+    )
+
+
 def main():
     global rank_map
+
+    set_research_style()
     rank_map, _ = piv.load_rank_cutoff_map(piv.RANK_PATH)
     specs = select_specs()
-    labels = [
-        f"cutoff={int(s['cutoff'])}, bw={int(s['bandwidth'])}, F≈{s['avg_f']:.3f}"
-        for s in specs
-    ]
+    labels = [make_label(s) for s in specs]
 
     fitted = {dep: [] for dep in piv.DEP_VARS}
     for spec in specs:
@@ -91,48 +143,78 @@ def main():
                 compute_fitted(dep, spec["cutoff"], spec["bandwidth"])
             )
 
+    # Use a restrained, colorblind-friendly palette with enough contrast
+    # to distinguish the five windows when curves overlap.
+    colors = ["#4e79a7", "#76b7b2", "#59a14f", "#f28e2b", "#e15759"]
+
     fig, axes = plt.subplots(
         len(piv.DEP_VARS),
         1,
-        figsize=(8.5, 3.7 * len(piv.DEP_VARS)),
+        figsize=(9.2, 11.2),
         sharex=False,
     )
     if len(piv.DEP_VARS) == 1:
         axes = [axes]
 
-    Y_LABELS = {
-        "amihud_illiq": "amihud_illiq",
-        "volatility": "volatility",
-        "price_info": "price_info",
-    }
+    fig.suptitle(
+        "Local-window IV fitted slopes by first-stage strength",
+        fontsize=14,
+        y=0.985,
+    )
+
+    handles = [
+        Line2D([0], [0], color=colors[i], linewidth=2.4, label=labels[i])
+        for i in range(len(labels))
+    ]
 
     for ax, dep in zip(axes, piv.DEP_VARS):
-        for spec_label, sound in zip(labels, fitted[dep]):
-            x_line = np.linspace(sound["xlo"], sound["xhi"], 250)
-            y_line = sound["beta"] * x_line
-            ax.plot(x_line, y_line, label=spec_label, linewidth=2)
-        ax.axhline(0.0, color="#888888", linestyle="--", linewidth=1)
-        ax.set_ylabel(Y_LABELS.get(dep, dep))
-        ax.grid(axis="y", alpha=0.25, linestyle=":")
+        dep_data = fitted[dep]
+        panel_xlo = min(sound["xlo"] for sound in dep_data)
+        panel_xhi = max(sound["xhi"] for sound in dep_data)
+        x_grid = np.linspace(panel_xlo, panel_xhi, 500)
 
-    axes[-1].set_xlabel("demeaned ind_own")
-    fig.tight_layout()
-    fig.subplots_adjust(bottom=0.25, right=0.82)
-    legend = fig.legend(
-        labels,
+        for color, sound in zip(colors, dep_data):
+            y_line = sound["beta"] * x_grid
+            mask = (x_grid >= sound["xlo"]) & (x_grid <= sound["xhi"])
+            y_line = np.where(mask, y_line, np.nan)
+            ax.plot(x_grid, y_line, color=color, linewidth=2.4)
+
+        ax.axhline(0.0, color="#666666", linestyle=(0, (2, 2)), linewidth=0.9)
+        ax.set_xlim(panel_xlo, panel_xhi)
+        ax.set_title(f"{PANEL_MARKS[dep]} {DEP_LABELS[dep]}", loc="left", pad=6)
+        ax.grid(axis="y", color="#d9d9d9", linestyle=(0, (2, 2)), linewidth=0.8)
+        ax.yaxis.set_major_locator(MaxNLocator(4))
+        ax.xaxis.set_major_locator(MaxNLocator(5))
+        ax.tick_params(axis="both", which="major", length=4, width=0.8, color="#333333")
+        ax.spines["left"].set_color("#333333")
+        ax.spines["bottom"].set_color("#333333")
+
+    axes[0].set_ylabel("Fitted 2SLS component")
+    for ax in axes[:-1]:
+        ax.tick_params(labelbottom=False)
+    axes[-1].set_xlabel("Demeaned ind_own")
+
+    fig.subplots_adjust(left=0.12, right=0.98, top=0.92, bottom=0.18, hspace=0.42)
+    fig.legend(
+        handles=handles,
         loc="lower center",
-        bbox_to_anchor=(0.5, -0.08),
-        fontsize="small",
+        bbox_to_anchor=(0.5, 0.055),
+        ncol=2,
         frameon=False,
-        ncol=1,
+        columnspacing=1.3,
+        handlelength=2.8,
     )
-    note = (
-        "Worst 2 (cutoff=2000, bandwidth=50/100) → median (cutoff=2000, bandwidth=300) → "
-        "best 2 (cutoff=1000, bandwidth=50/100); lines show fitted slope (beta × demeaned ind_own)."
+    fig.text(
+        0.5,
+        0.018,
+        "Representative local windows are ordered from the weakest to the strongest first stage.",
+        ha="center",
+        va="bottom",
+        fontsize=9,
+        color="#4b5563",
     )
-    fig.text(0.5, -0.16, note, ha="center", va="top", fontsize="small")
-    legend.set_zorder(10)
-    fig.savefig(OUT_FIG, format="svg", dpi=220, bbox_inches="tight")
+    fig.savefig(OUT_FIG, format="svg", dpi=240, bbox_inches="tight")
+    plt.close(fig)
     print(f"Saved: {OUT_FIG}")
 
 

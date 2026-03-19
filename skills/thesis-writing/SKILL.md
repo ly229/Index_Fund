@@ -58,6 +58,16 @@ Produce thesis-quality prose that mirrors the reference dissertation sample (Lu 
 - Identification plan with relevance and exclusion discussion.
 - Figure/table references and data-source notes where applicable.
 
+## Output Structure
+- Use Heading 1 for the chapter title.
+- Use Heading 2 for numbered sections and Notes.
+- Body text formatting: Times New Roman, 12-point.
+
+## Formatting Enforcement
+- When generating `.docx` outputs, apply Heading 1 to the title and Heading 2 to numbered section headings rather than leaving them as plain body text.
+- Ensure body paragraphs are formatted in Times New Roman, 12-point, unless the user explicitly requests a different thesis template.
+- If an intermediate draft is produced in Markdown or plain text first, preserve a structure that can be converted directly into the required Word heading hierarchy.
+
 ## Resources
 - `references/reference_style.md`: Full text-extracted version (all pages) — use only if you need the entire document.
 - `references/chapter_0_cover_intro.md`: Cover + Introduction + Research Question (pages 1–5).

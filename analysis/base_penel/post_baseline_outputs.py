@@ -17,6 +17,7 @@ IN_DETAIL = BASE_DIR / "panel_results_controls_detailed.csv"
 
 OUT_STATS_CSV = BASE_DIR / "panel_results_inference_stats.csv"
 OUT_STATS_TEX = BASE_DIR / "panel_results_inference_stats.tex"
+OUT_DETAIL_TEX = BASE_DIR / "panel_results_controls_detailed_pretty.tex"
 OUT_INTERPRET_MD = BASE_DIR / "baseline_interpretation.md"
 OUT_PLOT_SVG = BASE_DIR / "panel_coefficients_95ci.svg"
 
@@ -83,6 +84,72 @@ def build_stats(df: pd.DataFrame) -> pd.DataFrame:
     d["rhs_var"] = pd.Categorical(d["rhs_var"], categories=RHS_ORDER, ordered=True)
     d = d.sort_values(["rhs_var", "dep_var"]).reset_index(drop=True)
     return d
+
+
+def render_detailed_tex(df: pd.DataFrame) -> str:
+    dep_labels = {
+        "amihud_illiq": "Amihud illiquidity",
+        "volatility": "Volatility",
+        "price_info": "Price informativeness",
+    }
+    rhs_order = ["ind_own", "c_firm_size", "c_dollar_vol"]
+    rhs_labels = {
+        "ind_own": "Industry ownership",
+        "c_firm_size": "Firm size",
+        "c_dollar_vol": "Dollar volume",
+    }
+    dep_order = ["amihud_illiq", "volatility", "price_info"]
+
+    piv = df.set_index(["rhs_var", "dep_var"]).sort_index()
+
+    rows: list[str] = []
+    rows.append("\\begin{table}[!htbp]\\centering")
+    rows.append("\\caption{Panel Regressions with Firm and Time Fixed Effects: Detailed Output}")
+    rows.append("\\label{tab:panel_controls_detailed}")
+    rows.append("\\begin{threeparttable}")
+    rows.append("\\footnotesize")
+    rows.append("\\setlength{\\tabcolsep}{3.5pt}")
+    rows.append("\\renewcommand{\\arraystretch}{1.05}")
+    rows.append("\\begin{tabular}{lccc}")
+    rows.append("\\toprule")
+    rows.append(" & " + " & ".join(dep_labels[d] for d in dep_order) + " \\\\")
+    rows.append("\\midrule")
+
+    for rhs in rhs_order:
+        cells = []
+        for dep in dep_order:
+            r = piv.loc[(rhs, dep)]
+            stars = str(r.get("stars", "")) if pd.notna(r.get("stars", "")) else ""
+            cells.append(f"\\shortstack{{{float(r['coef']):.4f}{stars}\\\\({float(r['se']):.4f})}}")
+        rows.append(f"{rhs_labels[rhs]} & " + " & ".join(cells) + " \\\\")
+
+    rows.append("\\midrule")
+    for label, col in [("Observations", "nobs"), ("Entities", "entities"), ("Time periods", "time_periods")]:
+        rows.append(
+            label
+            + " & "
+            + " & ".join(str(int(piv.loc[("ind_own", dep)][col])) for dep in dep_order)
+            + " \\\\"
+        )
+    rows.append("Firm FE & Yes & Yes & Yes \\\\")
+    rows.append("Time FE & Yes & Yes & Yes \\\\")
+    rows.append("Two-way clustered SE & Yes & Yes & Yes \\\\")
+    rows.append("\\bottomrule")
+    rows.append("\\end{tabular}")
+    rows.append("\\vspace{0.35em}")
+    rows.append("\\noindent\\parbox{\\textwidth}{\\footnotesize")
+    rows.append(
+        "Notes: This table reports panel fixed-effects regressions with two-way clustered standard errors by firm and date. "
+        "Standard errors are reported underneath coefficients in parentheses. "
+        "* p$<$0.10, ** p$<$0.05, *** p$<$0.01.\\\\"
+    )
+    rows.append(
+        "The detailed output preserves the model-level counts and specification flags used in the baseline panel regressions."
+    )
+    rows.append("}")
+    rows.append("\\end{threeparttable}")
+    rows.append("\\end{table}")
+    return "\n".join(rows) + "\n"
 
 
 def export_latex(stats: pd.DataFrame) -> None:
@@ -208,10 +275,12 @@ def main() -> None:
     stats = build_stats(df)
     stats.to_csv(OUT_STATS_CSV, index=False)
     export_latex(stats)
+    OUT_DETAIL_TEX.write_text(render_detailed_tex(df), encoding="utf-8")
     render_plot(stats)
     write_interpretation(stats)
     print(f"Saved: {OUT_STATS_CSV}")
     print(f"Saved: {OUT_STATS_TEX}")
+    print(f"Saved: {OUT_DETAIL_TEX}")
     print(f"Saved: {OUT_PLOT_SVG}")
     print(f"Saved: {OUT_INTERPRET_MD}")
 

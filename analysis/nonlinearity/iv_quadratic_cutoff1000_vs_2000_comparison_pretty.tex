@@ -1,0 +1,55 @@
+\begin{table}[!htbp]\centering
+\caption{Quadratic IV Comparison: Russell 1000}
+\label{tab:iv_quadratic_comparison_r1000}
+\begin{threeparttable}
+\footnotesize
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.05}
+\begin{tabular}{lcccccc}
+\toprule
+ & b1 & b2 & Turning point & In support & F(own) & F(own$^2$) \\
+\midrule
+Amihud illiquidity & 0.4557 & -2.7663* & 0.0824 & Yes & -5878.688 & -2867.905 \\
+Volatility & -3.0590*** & 14.6507*** & 0.1044 & Yes & -1994.040 & 552.483 \\
+Price informativeness & 0.8048 & -71.3398* & 0.0056 & No & -4238.726 & -1945.796 \\
+\midrule
+\multicolumn{6}{l}{Controls: `c_firm_size`, `c_dollar_vol`, `running`, `running^2`. Firm and time fixed effects. Firm-clustered standard errors.} \\
+\multicolumn{6}{l}{Sample size is not reported in this comparison CSV.} \\
+\bottomrule
+\end{tabular}
+\vspace{0.35em}
+\noindent\parbox{\textwidth}{\footnotesize
+Notes: This table reports the quadratic IV comparison for the global design at the Russell 1000 cutoff. Coefficient entries are reported with significance stars based on p-values. The turning-point indicator reports whether the estimated turning point lies inside the [q01, q99] support band. * p$<$0.10, ** p$<$0.05, *** p$<$0.01.\\
+The first-stage columns report the joint F statistics for `ind_own` and `ind_own^2`.
+Sample size is not reported in this comparison CSV.
+}
+\end{threeparttable}
+\end{table}
+
+\begin{table}[!htbp]\centering
+\caption{Quadratic IV Comparison: Russell 2000}
+\label{tab:iv_quadratic_comparison_r2000}
+\begin{threeparttable}
+\footnotesize
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.05}
+\begin{tabular}{lcccccc}
+\toprule
+ & b1 & b2 & Turning point & In support & F(own) & F(own$^2$) \\
+\midrule
+Amihud illiquidity & 0.3313 & -4.8236** & 0.0343 & Yes & 638.786 & 28.413 \\
+Volatility & -2.5336*** & 15.6492*** & 0.0809 & Yes & 611.060 & 25.592 \\
+Price informativeness & -6.8010 & -35.9083 & -0.0947 & No & 664.395 & 34.308 \\
+\midrule
+\multicolumn{6}{l}{Controls: `c_firm_size`, `c_dollar_vol`, `running`, `running^2`. Firm and time fixed effects. Firm-clustered standard errors.} \\
+\multicolumn{6}{l}{Sample size is not reported in this comparison CSV.} \\
+\bottomrule
+\end{tabular}
+\vspace{0.35em}
+\noindent\parbox{\textwidth}{\footnotesize
+Notes: This table reports the quadratic IV comparison for the global design at the Russell 2000 cutoff. Coefficient entries are reported with significance stars based on p-values. The turning-point indicator reports whether the estimated turning point lies inside the [q01, q99] support band. * p$<$0.10, ** p$<$0.05, *** p$<$0.01.\\
+The first-stage columns report the joint F statistics for `ind_own` and `ind_own^2`.
+Sample size is not reported in this comparison CSV.
+}
+\end{threeparttable}
+\end{table}

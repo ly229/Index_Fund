@@ -1,0 +1,31 @@
+\begin{table}[!htbp]\centering
+\caption{Heterogeneity by Recession: Panel FE with Interaction}
+\label{tab:recession_interaction_detailed}
+\begin{threeparttable}
+\footnotesize
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.05}
+\begin{tabular}{lccc}
+\toprule
+ & Amihud illiquidity & Volatility & Price informativeness \\
+\midrule
+Industry ownership & \shortstack{0.0800***\\(0.0237)} & \shortstack{-0.0681***\\(0.0231)} & \shortstack{-3.2530***\\(0.2401)} \\
+Industry ownership $\times$ recession & \shortstack{-0.2142**\\(0.0867)} & \shortstack{0.1390\\(0.1036)} & \shortstack{-0.5590\\(0.8015)} \\
+Firm size & \shortstack{0.0082***\\(0.0016)} & \shortstack{-0.0983***\\(0.0031)} & \shortstack{-0.3411***\\(0.0267)} \\
+Dollar volume & \shortstack{-0.0221***\\(0.0017)} & \shortstack{0.0747***\\(0.0024)} & \shortstack{0.1456***\\(0.0147)} \\
+\midrule
+Observations & 241199 & 240515 & 239758 \\
+Entities & 8877 & 8858 & 8855 \\
+Time periods & 100 & 100 & 100 \\
+Firm FE & Yes & Yes & Yes \\
+Time FE & Yes & Yes & Yes \\
+Two-way clustered SE & Yes & Yes & Yes \\
+\bottomrule
+\end{tabular}
+\vspace{0.35em}
+\noindent\parbox{\textwidth}{\footnotesize
+Notes: This table reports panel fixed-effects regressions with an interaction between industry ownership and recession periods. Standard errors are reported underneath coefficients in parentheses. * p$<$0.10, ** p$<$0.05, *** p$<$0.01.\\
+The interaction coefficient is the incremental slope in recession quarters relative to non-recession quarters. Standard errors are two-way clustered by firm and date.
+}
+\end{threeparttable}
+\end{table}

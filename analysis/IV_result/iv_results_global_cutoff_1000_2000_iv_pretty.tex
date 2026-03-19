@@ -1,0 +1,67 @@
+\begin{table}[!htbp]\centering
+\caption{IV Regression Results: Russell 1000}
+\label{tab:iv_global_results_r1000}
+\begin{threeparttable}
+\footnotesize
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.05}
+\begin{tabular}{lc}
+\toprule
+ & Russell 1000 \\
+\midrule
+Amihud illiquidity & \shortstack{0.2319\\(0.1450)} \\
+Volatility & \shortstack{-1.4850***\\(0.4090)} \\
+Price informativeness & \shortstack{-5.8808\\(4.0159)} \\
+\midrule
+Observations & 235544 \\
+Firms & 8627 \\
+Dates & 99 \\
+Clusters & 8627 \\
+Endogenous variable & ind_own \\
+Instrument & z_rank_le_cutoff \\
+Controls & mktcap; c_dollar_vol; r_tno; rank_minus_cutoff \\
+Fixed effects & cusip FE + date FE \\
+SE type & firm clustered \\
+\bottomrule
+\end{tabular}
+\vspace{0.35em}
+\noindent\parbox{\textwidth}{\footnotesize
+Notes: This table reports second-stage IV estimates for the global cutoff-IV design. Standard errors are reported underneath coefficients in parentheses. * p$<$0.10, ** p$<$0.05, *** p$<$0.01.\\
+The sample is the global specification with no bandwidth restriction, estimated at the Russell 1000 cutoff.
+}
+\end{threeparttable}
+\end{table}
+
+\begin{table}[!htbp]\centering
+\caption{IV Regression Results: Russell 2000}
+\label{tab:iv_global_results_r2000}
+\begin{threeparttable}
+\footnotesize
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.05}
+\begin{tabular}{lc}
+\toprule
+ & Russell 2000 \\
+\midrule
+Amihud illiquidity & \shortstack{-0.2849***\\(0.0776)} \\
+Volatility & \shortstack{-0.1767\\(0.1263)} \\
+Price informativeness & \shortstack{-12.0868***\\(1.7568)} \\
+\midrule
+Observations & 235544 \\
+Firms & 8627 \\
+Dates & 99 \\
+Clusters & 8627 \\
+Endogenous variable & ind_own \\
+Instrument & z_rank_le_cutoff \\
+Controls & mktcap; c_dollar_vol; r_tno; rank_minus_cutoff \\
+Fixed effects & cusip FE + date FE \\
+SE type & firm clustered \\
+\bottomrule
+\end{tabular}
+\vspace{0.35em}
+\noindent\parbox{\textwidth}{\footnotesize
+Notes: This table reports second-stage IV estimates for the global cutoff-IV design. Standard errors are reported underneath coefficients in parentheses. * p$<$0.10, ** p$<$0.05, *** p$<$0.01.\\
+The sample is the global specification with no bandwidth restriction, estimated at the Russell 2000 cutoff.
+}
+\end{threeparttable}
+\end{table}

@@ -1,0 +1,34 @@
+\begin{table}[!htbp]\centering
+\caption{Spline Panel Regression Results}
+\label{tab:spline_panel_results}
+\begin{threeparttable}
+\footnotesize
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.05}
+\begin{tabular}{lccc}
+\toprule
+ & Amihud illiquidity & Volatility & Price informativeness \\
+\midrule
+Spline basis 1 & \shortstack{-0.0103***\\(0.0018)} & \shortstack{-0.0022*\\(0.0013)} & \shortstack{-0.1057***\\(0.0165)} \\
+Spline basis 2 & \shortstack{-0.0123***\\(0.0017)} & \shortstack{-0.0142***\\(0.0010)} & \shortstack{-0.2848***\\(0.0145)} \\
+Spline basis 3 & \shortstack{-0.0089***\\(0.0022)} & \shortstack{-0.0266***\\(0.0033)} & \shortstack{-0.7690***\\(0.0323)} \\
+Spline basis 4 & \shortstack{0.0039\\(0.0028)} & \shortstack{-0.0129***\\(0.0038)} & \shortstack{-0.5774***\\(0.0409)} \\
+\midrule
+Observations & 241199 & 240515 & 239758 \\
+Entities & 8877 & 8858 & 8855 \\
+Time periods & 100 & 100 & 100 \\
+Within $R^2$ & 0.0898 & 0.2200 & 0.0132 \\
+Best `ind_own` & 0.0467 & 0.0733 & 0.0104 \\
+Best curve value & -0.0002 & -0.0050 & 0.8715 \\
+Support q01 & 0.0104 & 0.0104 & 0.0104 \\
+Support q50 & 0.0510 & 0.0511 & 0.0513 \\
+Support q99 & 0.2267 & 0.2268 & 0.2266 \\
+\bottomrule
+\end{tabular}
+\vspace{0.35em}
+\noindent\parbox{\textwidth}{\footnotesize
+Notes: This table reports spline panel regressions with firm and time fixed effects. Standard errors are reported underneath coefficients in parentheses. The spline basis is a natural cubic spline in `ind_own` with four basis terms. * p$<$0.10, ** p$<$0.05, *** p$<$0.01.\\
+The sample support rows report the empirical ownership distribution used for interpreting the fitted spline.
+}
+\end{threeparttable}
+\end{table}

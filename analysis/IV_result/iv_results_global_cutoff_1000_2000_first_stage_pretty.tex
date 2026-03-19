@@ -1,0 +1,31 @@
+\begin{table}[!htbp]\centering
+\caption{First-Stage F Statistics for Global IV Cutoffs}
+\label{tab:iv_global_first_stage}
+\begin{threeparttable}
+\footnotesize
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.05}
+\begin{tabular}{lcc}
+\toprule
+ & Russell 1000 & Russell 2000 \\
+\midrule
+Amihud illiquidity & \shortstack{27.7911\\(p=1.35e-07)} & \shortstack{131.1626\\(p=<1e-16)} \\
+Volatility & \shortstack{27.3002\\(p=1.74e-07)} & \shortstack{128.9754\\(p=<1e-16)} \\
+Price informativeness & \shortstack{28.4864\\(p=9.44e-08)} & \shortstack{131.1246\\(p=<1e-16)} \\
+\midrule
+Observations & 235544 & 235544 \\
+Firms & 8627 & 8627 \\
+Dates & 99 & 99 \\
+Clusters & 8627 & 8627 \\
+Controls & mktcap; c_dollar_vol; r_tno; rank_minus_cutoff & mktcap; c_dollar_vol; r_tno; rank_minus_cutoff \\
+Fixed effects & cusip FE + date FE & cusip FE + date FE \\
+SE type & firm clustered & firm clustered \\
+\bottomrule
+\end{tabular}
+\vspace{0.35em}
+\noindent\parbox{\textwidth}{\footnotesize
+Notes: This table reports first-stage relevance diagnostics for the global cutoff-IV design. Entries are first-stage F statistics for the excluded cutoff indicator in the first-stage regression of instrumented ownership. P-values are shown in parentheses. * p$<$0.10, ** p$<$0.05, *** p$<$0.01.\\
+The sample is the global specification with no bandwidth restriction, estimated separately at the Russell 1000 and Russell 2000 cutoffs.
+}
+\end{threeparttable}
+\end{table}

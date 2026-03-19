@@ -1,0 +1,5 @@
+interface:
+  display_name: "Regression Table Formatting"
+  short_description: "Format regression CSVs into LaTeX tables"
+  default_prompt: "Use $regression-table-formatting to turn a regression CSV into a publication-ready LaTeX table with booktabs rules, multi-line coefficient cells, and a full-width notes block."
+

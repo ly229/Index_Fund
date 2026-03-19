@@ -1,0 +1,63 @@
+\begin{table}[!htbp]\centering
+\caption{IV Robustness Grid: Russell 1000}
+\label{tab:iv_robustness_grid_r1000}
+\begin{threeparttable}
+\footnotesize
+\setlength{\tabcolsep}{2.8pt}
+\renewcommand{\arraystretch}{1.05}
+\begin{tabular}{lccccccc}
+\toprule
+ & 50 & 100 & 150 & 200 & 300 & 500 & global \\
+\midrule
+Amihud illiquidity & \shortstack{0.0744\\(0.0563)\\F=2.46\\p=0.1169} & \shortstack{0.0067\\(0.0220)\\F=2.16\\p=0.1412} & \shortstack{0.0924\\(0.1595)\\F=0.43\\p=0.5111} & \shortstack{0.0050\\(0.0370)\\F=2.14\\p=0.1432} & \shortstack{0.0474\\(0.5740)\\F=0.02\\p=0.8861} & \shortstack{0.4971\\(2.2070)\\F=0.05\\p=0.8170} & \shortstack{0.2319\\(0.1450)\\F=27.79\\p=1.35e-07} \\
+Volatility & \shortstack{2.4288\\(3.3057)\\F=2.45\\p=0.1172} & \shortstack{3.8671\\(3.3886)\\F=2.19\\p=0.1391} & \shortstack{13.7755\\(22.5574)\\F=0.43\\p=0.5132} & \shortstack{4.1938\\(4.0521)\\F=2.15\\p=0.1423} & \shortstack{-10.8720\\(73.8257)\\F=0.02\\p=0.8774} & \shortstack{20.9380\\(98.3811)\\F=0.05\\p=0.8316} & \shortstack{-1.4850***\\(0.4090)\\F=27.30\\p=1.74e-07} \\
+Price informativeness & \shortstack{21.3384\\(52.7615)\\F=2.42\\p=0.1196} & \shortstack{16.8883\\(35.3193)\\F=2.30\\p=0.1291} & \shortstack{29.6162\\(111.4591)\\F=0.39\\p=0.5339} & \shortstack{21.7115\\(41.5191)\\F=2.26\\p=0.1324} & \shortstack{322.2773\\(1071.8428)\\F=0.10\\p=0.7560} & \shortstack{109.6254\\(543.8555)\\F=0.05\\p=0.8225} & \shortstack{-5.8808\\(4.0159)\\F=28.49\\p=9.44e-08} \\
+\midrule
+N & 3009 & 6135 & 9081 & 12432 & 19556 & 36777 & 235544 \\
+Firms & 539 & 791 & 950 & 1068 & 1276 & 1761 & 8627 \\
+Dates & 99 & 99 & 99 & 99 & 99 & 99 & 99 \\
+Clusters & 539 & 791 & 950 & 1068 & 1276 & 1761 & 8627 \\
+Controls & `c_firm_size`, `c_dollar_vol`, `running` powers 1-2 & `c_firm_size`, `c_dollar_vol`, `running` powers 1-2 & `c_firm_size`, `c_dollar_vol`, `running` powers 1-2 & `c_firm_size`, `c_dollar_vol`, `running` powers 1-2 & `c_firm_size`, `c_dollar_vol`, `running` powers 1-2 & `c_firm_size`, `c_dollar_vol`, `running` powers 1-2 & `c_firm_size`, `c_dollar_vol`, `running` powers 1-2 \\
+Fixed effects & Firm + time & Firm + time & Firm + time & Firm + time & Firm + time & Firm + time & Firm + time \\
+SE type & Firm clustered & Firm clustered & Firm clustered & Firm clustered & Firm clustered & Firm clustered & Firm clustered \\
+\bottomrule
+\end{tabular}
+\vspace{0.35em}
+\noindent\parbox{\textwidth}{\footnotesize
+Notes: This table reports the quadratic IV robustness grid for the local-window specifications at the Russell 1000 cutoff. Each cell reports the 2SLS coefficient on `ind_own`, its standard error, and the first-stage F statistic / p-value. Bandwidth labels are in basis points; `global` denotes the unrestricted sample. * p$<$0.10, ** p$<$0.05, *** p$<$0.01.\\
+Weak local-window cases should be interpreted cautiously, especially when the first-stage F statistic is far below the conventional threshold of 10.
+}
+\end{threeparttable}
+\end{table}
+
+\begin{table}[!htbp]\centering
+\caption{IV Robustness Grid: Russell 2000}
+\label{tab:iv_robustness_grid_r2000}
+\begin{threeparttable}
+\footnotesize
+\setlength{\tabcolsep}{2.8pt}
+\renewcommand{\arraystretch}{1.05}
+\begin{tabular}{lccccccc}
+\toprule
+ & 50 & 100 & 150 & 200 & 300 & 500 & global \\
+\midrule
+Amihud illiquidity & \shortstack{-3.9920\\(33.3665)\\F=0.01\\p=0.9045} & \shortstack{0.6955\\(3.8003)\\F=0.04\\p=0.8434} & \shortstack{0.0153\\(0.2220)\\F=1.42\\p=0.2335} & \shortstack{0.4610\\(2.0254)\\F=0.07\\p=0.7967} & \shortstack{-0.2935\\(0.5156)\\F=0.79\\p=0.3739} & \shortstack{-0.4358\\(0.5759)\\F=0.81\\p=0.3673} & \shortstack{-0.2849***\\(0.0776)\\F=131.16\\p=<1e-16} \\
+Volatility & \shortstack{-0.5604\\(22.8979)\\F=0.01\\p=0.9159} & \shortstack{1.1773\\(13.9026)\\F=0.05\\p=0.8259} & \shortstack{-0.7824\\(2.2575)\\F=1.47\\p=0.2250} & \shortstack{6.9003\\(34.4527)\\F=0.05\\p=0.8304} & \shortstack{1.3420\\(3.8259)\\F=0.70\\p=0.4037} & \shortstack{-3.7182\\(5.1797)\\F=0.75\\p=0.3859} & \shortstack{-0.1767\\(0.1263)\\F=128.98\\p=<1e-16} \\
+Price informativeness & \shortstack{93.0678\\(784.7418)\\F=0.02\\p=0.8933} & \shortstack{-108.9001\\(520.3633)\\F=0.05\\p=0.8297} & \shortstack{-3.9988\\(34.0028)\\F=1.31\\p=0.2515} & \shortstack{115.0171\\(502.9717)\\F=0.06\\p=0.8045} & \shortstack{15.6064\\(45.6625)\\F=0.90\\p=0.3419} & \shortstack{32.3535\\(52.5557)\\F=0.90\\p=0.3440} & \shortstack{-12.0868***\\(1.7568)\\F=131.12\\p=<1e-16} \\
+\midrule
+N & 4947 & 10458 & 15777 & 21039 & 30804 & 49683 & 235544 \\
+Firms & 937 & 1448 & 1786 & 2015 & 2344 & 2877 & 8627 \\
+Dates & 99 & 99 & 99 & 99 & 99 & 99 & 99 \\
+Clusters & 937 & 1448 & 1786 & 2015 & 2344 & 2877 & 8627 \\
+Controls & `c_firm_size`, `c_dollar_vol`, `running` powers 1-2 & `c_firm_size`, `c_dollar_vol`, `running` powers 1-2 & `c_firm_size`, `c_dollar_vol`, `running` powers 1-2 & `c_firm_size`, `c_dollar_vol`, `running` powers 1-2 & `c_firm_size`, `c_dollar_vol`, `running` powers 1-2 & `c_firm_size`, `c_dollar_vol`, `running` powers 1-2 & `c_firm_size`, `c_dollar_vol`, `running` powers 1-2 \\
+Fixed effects & Firm + time & Firm + time & Firm + time & Firm + time & Firm + time & Firm + time & Firm + time \\
+SE type & Firm clustered & Firm clustered & Firm clustered & Firm clustered & Firm clustered & Firm clustered & Firm clustered \\
+\bottomrule
+\end{tabular}
+\vspace{0.35em}
+\noindent\parbox{\textwidth}{\footnotesize
+Notes: This table reports the quadratic IV robustness grid for the local-window specifications at the Russell 2000 cutoff. Each cell reports the 2SLS coefficient on `ind_own`, its standard error, and the first-stage F statistic / p-value. Bandwidth labels are in basis points; `global` denotes the unrestricted sample. * p$<$0.10, ** p$<$0.05, *** p$<$0.01.\\
+Weak local-window cases should be interpreted cautiously, especially when the first-stage F statistic is far below the conventional threshold of 10.
+}
+\end{threeparttable}
+\end{table}

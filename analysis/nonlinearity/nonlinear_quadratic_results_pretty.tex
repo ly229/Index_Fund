@@ -1,0 +1,35 @@
+\begin{table}[!htbp]\centering
+\caption{Quadratic Nonlinearity Results}
+\label{tab:nonlinear_quadratic_results}
+\begin{threeparttable}
+\footnotesize
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.05}
+\begin{tabular}{lccc}
+\toprule
+ & Amihud illiquidity & Volatility & Price informativeness \\
+\midrule
+Linear term ($b_1$) & \shortstack{0.0107\\(0.0333)} & \shortstack{-0.3250***\\(0.0626)} & \shortstack{-10.3568***\\(1.1805)} \\
+Quadratic term ($b_2$) & \shortstack{0.1882**\\(0.0947)} & \shortstack{0.9991***\\(0.2076)} & \shortstack{26.7002***\\(4.8399)} \\
+Turning point & \shortstack{-0.0284\\(0.1002)} & \shortstack{0.1626\\(0.0134)} & \shortstack{0.1939\\(0.0143)} \\
+In support & No & Yes & Yes \\
+\midrule
+Observations & 241199 & 240515 & 239758 \\
+Entities & 8877 & 8858 & 8855 \\
+Time periods & 100 & 100 & 100 \\
+Support min & 0.0098 & 0.0098 & 0.0098 \\
+Support q01 & 0.0104 & 0.0104 & 0.0104 \\
+Support q05 & 0.0128 & 0.0128 & 0.0129 \\
+Support q50 & 0.0510 & 0.0511 & 0.0513 \\
+Support q95 & 0.1821 & 0.1822 & 0.1822 \\
+Support q99 & 0.2267 & 0.2268 & 0.2266 \\
+Support max & 0.9526 & 0.9526 & 0.9526 \\
+\bottomrule
+\end{tabular}
+\vspace{0.35em}
+\noindent\parbox{\textwidth}{\footnotesize
+Notes: This table reports the reduced-form quadratic fixed-effects results for the three market-quality outcomes. Coefficients are reported with standard errors underneath in parentheses, and significance stars are based on p-values. The turning-point row reports the implied optimum of the fitted quadratic and its standard error. * p$<$0.10, ** p$<$0.05, *** p$<$0.01.\\
+The support rows summarize the empirical distribution of `ind_own` used to interpret whether the turning point lies inside the observed range.
+}
+\end{threeparttable}
+\end{table}
