@@ -1,0 +1,142 @@
+\documentclass[9pt, dvipsnames]{beamer} 
+
+\usetheme{CambridgeUS}
+%\usecolortheme{beaver} 
+\usefonttheme{professionalfonts} 
+\usepackage{times}
+\usepackage{amsmath}
+\usepackage{verbatim}
+\usepackage{anyfontsize}
+\usepackage{subcaption} 
+\usepackage{graphicx} 
+\usepackage{float}
+\usepackage{booktabs} 
+\usepackage{threeparttable}
+\usepackage{rotating}
+\usepackage[export]{adjustbox}
+\setbeamertemplate{caption}[numbered]
+\newcounter{saveenumi}
+\resetcounteronoverlays{saveenumi}
+\usepackage[multidot]{grffile} 
+\usepackage{tabularx} 
+\usepackage{tikz}
+\usepackage{appendix}
+\usepackage{appendixnumberbeamer}
+\usepackage{xcolor}
+\newcommand\ytl[2]{
+\parbox[b]{8em}{\hfill{\color{cyan}\bfseries\sffamily #1}~$\cdots\cdots$~}\makebox[0pt][c]{$\bullet$}\vrule\quad \parbox[c]{4.5cm}{\vspace{7pt}\color{red!40!black!80}\raggedright\sffamily #2.\\[7pt]}\\[-3pt]}
+
+
+\definecolor{UBCblue}{rgb}{0.04706, 0.13725, 0.26667} % UBC Blue (primary)
+\definecolor{UBCgrey}{rgb}{0.3686, 0.5255, 0.6235} % UBC Grey (secondary)
+
+\setbeamercolor{palette primary}{bg=UBCblue,fg=white}
+\setbeamercolor{palette secondary}{bg=UBCblue,fg=white}
+\setbeamercolor{palette tertiary}{bg=UBCblue,fg=white}
+\setbeamercolor{palette quaternary}{bg=UBCblue,fg=white}
+\setbeamercolor{structure}{fg=UBCblue} % itemize, enumerate, etc
+\setbeamercolor{section in toc}{fg=UBCblue} % TOC sections
+\setbeamercolor{title}{fg=UBCblue} %title color
+\setbeamercolor{frametitle}{fg=UBCblue} %frametitle color
+\setbeamercolor{block title alerted}{fg=UBCblue} %alterblocks color
+\setbeamercolor{alerted text}{fg=UBCgrey} %alterblocks color
+
+% Override palette coloring with secondary
+\setbeamercolor{subsection in head/foot}{bg=UBCgrey,fg=white}
+
+
+
+\title{How does the rise of index investing affect market quality?} 
+\author[Lu Yu]{Lu Yu\\{\vskip 3mm Supervised by: James Angel \\ Toshihiko Mukoyama}} 
+%\date{Octber 18, 2022} 
+
+\AtBeginSection[]
+{
+  \input{slides/slide-section-toc}
+}
+
+\begin{document}
+
+    \everymath{\displaystyle}
+
+    \input{slides/slide-01}
+    \input{slides/slide-02}
+
+    \section{Research Question}\label{sec:research-question}
+    \subsection{How does index ownership affect market quality?}
+    \input{slides/slide-03}
+    \subsection{Contribution}
+    \input{slides/slide-03b}
+
+    \section{Background and Literature Reviews}\label{sec:background-literature}
+    \subsection{Rise of Index Investing}
+    \input{slides/slide-03c}
+    \subsection{Literature Review}
+    \input{slides/slide-03d}
+
+    \section{Data}\label{sec:Data}
+    \subsection{Thomson S12, CRSP}
+    \input{slides/slide-04}
+
+    \section{Chapter 1: Causal Effect of Index Ownership on Market Quality}\label{sec:Model}
+    \subsection{Baseline Panel Regression}
+    \input{slides/slide-05}
+    \input{slides/slide-06}
+    \input{slides/slide-06a}
+    \input{slides/slide-07}
+    \input{slides/slide-08}
+    \input{slides/slide-09}
+    \input{slides/slide-09a}
+    \input{slides/slide-09b}
+    \input{slides/slide-09c}
+    \input{slides/slide-10}
+
+    \subsection{2SLS Regression}
+    \input{slides/slide-11}
+    \input{slides/slide-11a}
+    \input{slides/slide-12}
+    \input{slides/slide-13}
+    \input{slides/slide-14}
+    \input{slides/slide-15}
+
+    \subsection{Nonlinearity - Quadratic}
+    \input{slides/slide-16}
+    \input{slides/slide-17}
+    \input{slides/slide-18}
+    \input{slides/slide-19}
+    \input{slides/slide-20}
+
+    \subsection{Nonlinearity - Spline}
+    \input{slides/slide-21}
+    \input{slides/slide-22}
+    \input{slides/slide-23}
+    \input{slides/slide-24}
+    \input{slides/slide-25}
+
+    \section{Chapter 2: Heterogeneity Analysis of Index Ownership on Market Quality}\label{sec:Heterogeneity}
+    \subsection{HA - Cross-sectional}
+    \input{slides/slide-26}
+    \input{slides/slide-27}
+    \input{slides/slide-27a}
+    \input{slides/slide-27b}
+
+    \subsection{HA - Time-series}
+    \input{slides/slide-28}
+    \input{slides/slide-29}
+    \input{slides/slide-29a}
+    \input{slides/slide-29b}
+
+    \subsection{HA - Cross Effects}
+    \input{slides/slide-30}
+    \input{slides/slide-30a}
+    \input{slides/slide-30b}
+
+    \appendix
+    \input{slides/slide-31}
+    \input{slides/slide-32}
+    \input{slides/slide-33}
+    \input{slides/slide-34}
+    \input{slides/slide-35}
+    \input{slides/slide-36}
+
+\end{document}
